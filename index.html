@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <!-- google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <!--boostrap icons cdn-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--font awesome-->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <!--bootstrap-->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!--main stylesheet-->
+    <link rel="stylesheet" href="./css/style.css">
+    <!--media query stylesheet-->
+    <link rel="stylesheet" href="./css/media.css">
+</head>
+<body>
+
+    <div class="all my-5">
+        <div class="container">
+            <h1 class="header-title fs-50 text-capitalize text-center position-relative w-fit m-auto">bookmarker</h1>
+            <div class="section-border my-5">
+                <h2 class="fs-25 text-center my-4"><i class="head fa-solid fa-bookmark"></i> <span class="bookmark-word">Bookmark</span> <span class="your-word">your</span> <span class="fav-word">favorite</span> <span class="sites-word">sites</span> <i class="tail fa-solid fa-bookmark"></i></h2>
+                <form>
+                    <div class="mb-4">
+                        <label for="siteName" class="text-capitalize fw-semibold mb-2"><i class="fa-solid fa-book-bookmark me-2"></i> site Name</label>
+                        <input id="siteName" class="form-control" placeholder="Bookmark Name" type="text" oninput="validate(nameRegex,siteName)"/>
+                    </div>
+                    <div>
+                        <label for="siteUrl" class="text-capitalize fw-semibold mb-2"><i class="fa-solid fa-link"></i> site URl</label>
+                        <input id="siteUrl" class="form-control mb-4" placeholder="Website URL" type="text" oninput="validate(urlRegex,siteUrl)"/>
+                    </div>                 
+                    <button type="button" class="btn form-btn border border-1 d-block m-auto mb-4 " onclick="addSite()">Submit </button>                  
+                </form>
+            </div>
+            <div>
+                <table class="table text-center bg-white">
+                    <thead>
+                        <tr>
+                            <th class="text-capitalize">index</th>
+                            <th class="text-capitalize">website name</th>
+                            <th class="text-capitalize">visit</th>
+                            <th class="text-capitalize">delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="siteTable">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--~ bootstrap js file-->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!--^ main js file-->
+    <script src="./js/index.js"></script>
+</body>
+</html>
